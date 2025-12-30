@@ -1,24 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Video Downloader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
 
-<div class="terminal">
-    <h1>$ Video Downloader</h1>
-    <p class="status">Your Render Flask app is working ✅</p>
+<div class="card">
+    <h1>🎬 Video Downloader</h1>
+    <p class="sub">Fast, Clean & Professional Downloader</p>
 
     <form method="POST">
-        <input type="text" name="url" placeholder="Paste video URL here">
-        <br>
+        <input type="url" name="url" placeholder="Paste video URL here" required>
+
+        <select name="format">
+            <option value="video">Video (MP4)</option>
+            <option value="audio">Audio (MP3)</option>
+        </select>
+
+        <select name="quality">
+            <option>144p</option>
+            <option>240p</option>
+            <option>360p</option>
+            <option>720p</option>
+            <option>1080p</option>
+        </select>
+
         <button type="submit">Download</button>
     </form>
 
     {% if message %}
-        <p class="message">{{ message }}</p>
+    <p class="msg">{{ message }}</p>
     {% endif %}
+</div>
+
+<div class="info">
+    <h3>✅ What This Website Can Do</h3>
+    <ul>
+        <li>Download Videos Using URL</li>
+        <li>Convert Video To Audio</li>
+        <li>Select Quality Before Download</li>
+        <li>Works Perfectly On Mobile</li>
+    </ul>
+
+    <h3>✅ Supported Platforms</h3>
+    <ul>
+        <li>YouTube</li>
+        <li>Instagram</li>
+        <li>Facebook</li>
+        <li>Twitter / X</li>
+        <li>TikTok & More</li>
+    </ul>
+
+    <h3>✅ How To Use</h3>
+    <ul>
+        <li>Copy Video Link</li>
+        <li>Paste URL Above</li>
+        <li>Select Format & Quality</li>
+        <li>Click Download</li>
+    </ul>
 </div>
 
 </body>
