@@ -6,51 +6,21 @@
 </head>
 <body>
 
-<div class="layout">
+<h1>🔥 Cultivation Fandom</h1>
+<p>Donghua • Manhwa • Murim • Cultivation Database</p>
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-        <h2>Cultivation Wiki</h2>
-        <ul>
-            <li>Home</li>
-            <li>Characters</li>
-            <li>Novels</li>
-            <li>Donghua</li>
-            <li>Manhwa</li>
-            <li>Cultivation Levels</li>
-        </ul>
-    </aside>
-
-    <!-- MAIN CONTENT -->
-    <main class="content">
-
-        <h1>{{ character.name }}</h1>
-        <p class="subtitle">{{ character.novel }}</p>
-
-        <!-- INFO BOX -->
-        <div class="infobox">
-            <p><b>Age:</b> {{ character.age }}</p>
-            <p><b>Donghua:</b> {{ character.donghua.season }}</p>
-            <p><b>Breakthrough Episode:</b> {{ character.donghua.breakthrough_episode }}</p>
-        </div>
-
-        <!-- CULTIVATION TABLE -->
-        <h2>Cultivation Progress</h2>
-        <table>
-            <tr>
-                <th>Realm</th>
-                <th>Chapter</th>
-            </tr>
-            {% for level, chapter in character.cultivation %}
-            <tr>
-                <td>{{ level }}</td>
-                <td>{{ chapter }}</td>
-            </tr>
-            {% endfor %}
-        </table>
-
-    </main>
-
+<div class="container">
+    {% for c in characters %}
+    <div class="card">
+        <h2>{{ c.name }}</h2>
+        <p><b>Novel:</b> {{ c.novel }}</p>
+        <p><b>Power Level:</b> {{ c.power }}</p>
+        <p><b>Breakthrough:</b> {{ c.breakthrough }}</p>
+        <p><b>Age:</b> {{ c.age }}</p>
+        <p><b>Manhwa:</b> {{ c.manhwa }}</p>
+        <p><b>Donghua:</b> {{ c.donghua }}</p>
+    </div>
+    {% endfor %}
 </div>
 
 </body>
