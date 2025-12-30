@@ -5,6 +5,10 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "🚀 Your Render Flask App is Working!"
+    return """
+    <h1>Video Downloader</h1>
+    <p>Your Render Flask app is working ✅</p>
+    """
 
-# ⚠️ DO NOT use app.run() on Render
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000)
