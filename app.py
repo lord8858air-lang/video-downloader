@@ -1,14 +1,10 @@
+
 from flask import Flask
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return """
-    <h1>🚀 Flask App Live!</h1>
-    <p>Congratulations 🎉</p>
-    <p>Your GitHub + Render deployment is successful.</p>
-    """
+    return "🚀 Your Render Flask App is Working!"
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+# ⚠️ DO NOT use app.run() on Render
