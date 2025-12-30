@@ -14,15 +14,6 @@ def home():
             "age": "24",
             "manhwa": "Chapter 385",
             "donghua": "Season 5"
-        },
-        {
-            "name": "Han Li",
-            "novel": "A Record of a Mortal’s Journey",
-            "power": "Immortal Ascension",
-            "breakthrough": "Chapter 2446",
-            "age": "Unknown",
-            "manhwa": "Chapter 300+",
-            "donghua": "Season 3"
         }
     ]
     return render_template("index.html", characters=characters)
