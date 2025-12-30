@@ -1,44 +1,64 @@
+
 body {
-    background-color: black;
-    color: #00ff00;
-    font-family: monospace;
-    text-align: center;
-    margin-top: 80px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b2d2f;
+    color: #fff;
 }
 
-.terminal {
-    width: 90%;
-    max-width: 400px;
-    margin: auto;
-    border: 1px solid #00ff00;
+.card {
+    max-width: 360px;
+    margin: 30px auto;
+    background: #103b3f;
     padding: 20px;
+    border-radius: 15px;
+    text-align: center;
 }
 
-input {
-    width: 90%;
-    padding: 10px;
-    background: black;
-    border: 1px solid #00ff00;
-    color: #00ff00;
-    font-family: monospace;
+.card h1 {
+    margin-bottom: 5px;
+}
+
+.sub {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
 }
 
 button {
     margin-top: 15px;
-    padding: 10px 20px;
-    background: #00ff00;
+    width: 100%;
+    padding: 14px;
+    background: #00ff9c;
     border: none;
-    color: black;
+    border-radius: 12px;
+    font-size: 16px;
     font-weight: bold;
-    cursor: pointer;
 }
 
-.status {
-    font-size: 14px;
-    margin-bottom: 20px;
+.msg {
+    margin-top: 10px;
+    color: #00ff9c;
 }
 
-.message {
-    margin-top: 15px;
-    color: cyan;
+.info {
+    max-width: 360px;
+    margin: auto;
+    padding: 10px 20px 30px;
+}
+
+.info h3 {
+    color: #00ff9c;
+    margin-top: 20px;
+}
+
+.info ul {
+    padding-left: 18px;
 }
