@@ -1,26 +1,31 @@
+
 from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    character = {
-        "name": "Xiao Yan",
-        "novel": "Battle Through the Heavens",
-        "age": "15 → 30+",
-        "cultivation": [
-            ("Dou Zhi", "Chapter 1"),
-            ("Dou Shi", "Chapter 120"),
-            ("Dou Wang", "Chapter 450"),
-            ("Dou Zun", "Chapter 900"),
-            ("Dou Di", "Final Arc")
-        ],
-        "donghua": {
-            "season": "BTTH",
-            "breakthrough_episode": "Season 4 Episode 24"
+    characters = [
+        {
+            "name": "Xiao Yan",
+            "novel": "Battle Through the Heavens",
+            "power": "Dou Sheng",
+            "breakthrough": "Chapter 1648",
+            "age": "24",
+            "manhwa": "Chapter 385",
+            "donghua": "Season 5"
+        },
+        {
+            "name": "Han Li",
+            "novel": "A Record of a Mortal’s Journey",
+            "power": "Immortal Ascension",
+            "breakthrough": "Chapter 2446",
+            "age": "Unknown",
+            "manhwa": "Chapter 300+",
+            "donghua": "Season 3"
         }
-    }
-    return render_template("index.html", character=character)
+    ]
+    return render_template("index.html", characters=characters)
 
 if __name__ == "__main__":
     app.run()
