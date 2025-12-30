@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Downloader</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="terminal">
+    <h1>$ Video Downloader</h1>
+    <p class="status">Your Render Flask app is working ✅</p>
+
+    <form method="POST">
+        <input type="text" name="url" placeholder="Paste video URL here">
+        <br>
+        <button type="submit">Download</button>
+    </form>
+
+    {% if message %}
+        <p class="message">{{ message }}</p>
+    {% endif %}
+</div>
+
+</body>
+</html>
